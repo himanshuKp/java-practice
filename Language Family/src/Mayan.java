@@ -3,9 +3,11 @@
 class Mayan extends Language {
 	  protected String name;
 	  protected int numSpeakers;
+	  protected String region = "Central America";
+	  protected String wordOrder = "verb-object-subject";
 	  
-	  Mayan(String languageName,int speakers){
-	    super(languageName,speakers,"Central America","verb-object-subject");
+	  Mayan(String languageName,int speakers, String region, String wordOrder ){
+	    super(languageName,speakers,region,wordOrder);
 	  }
 	  
 	  @Override
