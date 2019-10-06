@@ -21,5 +21,12 @@ class Language{
 	  public static void main(String[] args){
 	    Mayan mayanLanguage = new Mayan("Ki'che'",30000);
 	    mayanLanguage.getInfo();
+	    
+	    SinoTibetan sTibetan1 = new SinoTibetan("Burmese",10000);
+	    sTibetan1.getInfo();
+	    
+	    SinoTibetan sTibetan = new SinoTibetan("Mandarin Chinese",20000);
+	  	sTibetan.getInfo();
+	    
 	  }
 	}
