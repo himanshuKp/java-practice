@@ -2,6 +2,7 @@ package babystep;
 
 public class ByteShortIntLong {
   public static void main(String[] args) {
+    @SuppressWarnings("unused")
     int myValue = 10000;
     
     int myMinIntValue = Integer.MIN_VALUE;
