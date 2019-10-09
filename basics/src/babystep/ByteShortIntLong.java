@@ -40,5 +40,24 @@ public class ByteShortIntLong {
     System.out.println("Long Minimum Value: " +myLongMinValue);
     System.out.println("Long Maximum Value: " +myLongMaxValue);
     
+    int myTotal = (myMinIntValue/2);
+    
+    //if not type casted show error: Type mismatch: cannot convert from int to byte
+    //byte myNewByteValue = (myByteMinValue/2); 
+    byte myNewByteValue = (byte)(myByteMinValue/2);
+    
+    short myNewShortValue = (short)(myShortMinValue/2);
+    
+    
+    byte myNewChallengeByteValue = 100;
+    
+    short myNewChallengeShortValue = 20000;
+    
+    int myNewChallengeIntValue = 200000;
+    
+    long myNewChallengeLongValue = 50000 + 10 * (myNewChallengeByteValue+myNewChallengeShortValue+myNewChallengeIntValue);
+    
+    System.out.println("Challenge Long Value: "+myNewChallengeLongValue);
+    
   }
 }
