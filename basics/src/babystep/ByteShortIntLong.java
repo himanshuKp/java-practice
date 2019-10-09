@@ -18,5 +18,27 @@ public class ByteShortIntLong {
     int myMaxNumber = 2_147_483_647;
     
     System.out.println("MyMaxNumber "+myMaxNumber);
+    
+    byte myByteMinValue = Byte.MIN_VALUE;   //byte occupies 8 bits
+    byte myByteMaxValue = Byte.MAX_VALUE;
+    
+    System.out.println("Byte Minimum Value: " +myByteMinValue);
+    System.out.println("Byte Maximum Value: " +myByteMaxValue);
+    
+    short  myShortMinValue = Short.MIN_VALUE;
+    short myShortMaxValue = Short.MAX_VALUE;
+    
+    System.out.println("Short Minimum Value: " +myShortMinValue);
+    System.out.println("Short Maximum Value: " +myShortMaxValue);
+    
+    long myLongValue = 2_147_483_647_123L;
+    System.out.println("Long Value: " +myLongValue);
+    
+    long  myLongMinValue = Long.MIN_VALUE;
+    long myLongMaxValue = Long.MAX_VALUE;
+    
+    System.out.println("Long Minimum Value: " +myLongMinValue);
+    System.out.println("Long Maximum Value: " +myLongMaxValue);
+    
   }
 }
