@@ -1,13 +1,16 @@
 package secondsAndMinuteChallenge;
 
 public class Main {
+  
+  private static final String INVALID_VALUE_MESSAGE = "Inavlid Value";
+  
   public static void main(String[] args) {
     System.out.println(getDurationString(3000));
   }
   
   public static String getDurationString(int minutes, int seconds) {
     if(minutes<0 || (seconds < 0) || (seconds > 59)) {
-       return "Invalid value";
+       return INVALID_VALUE_MESSAGE;
     }else {
       System.out.println("Count: minutes : " +minutes+ " seconds: " +seconds);
       int calculateHour = (minutes/60);
@@ -21,7 +24,7 @@ public class Main {
   
   public static String getDurationString(int seconds) {
     if(seconds < 0) {
-      return "Invalid value";
+      return INVALID_VALUE_MESSAGE;
     }else {
       int calculateMinutes = (seconds)/60;
       System.out.println("calculated minutes : " +calculateMinutes);
