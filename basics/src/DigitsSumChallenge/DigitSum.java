@@ -1,3 +1,4 @@
+package DigitsSumChallenge;
 
 public class DigitSum {
 	public static int sumDigits(int number) {
