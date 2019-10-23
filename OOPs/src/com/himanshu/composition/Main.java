@@ -9,8 +9,6 @@ public class Main {
     Motherboard theMotherboard = new Motherboard("B3-299","ASUS",4,6,"v2.44");
     
     PC thePC = new PC(theCase,theMonitor,theMotherboard);
-    thePC.getMonitor().drawPixel(1500, 2000, "red");
-    thePC.getMotherboard().loadProgram("Windows 19");
-    thePC.getTheCase().pressPowerButton();
+    thePC.powerUp();
   }
 }
