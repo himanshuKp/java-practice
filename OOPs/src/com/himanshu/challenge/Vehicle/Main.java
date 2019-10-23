@@ -28,6 +28,12 @@ public class Main {
 			System.out.println(field.getName());
 		}
 		
+		//get class loader 
+		System.out.println(BMW.class.getClassLoader());
+		
+		System.out.println(String.class.getClassLoader());
+		
+		
 //		bmw.accelerate(30);
 //		bmw.accelerate(36);
 //		bmw.accelerate(-56);
