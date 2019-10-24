@@ -8,9 +8,9 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		BMW bmw = new BMW(36);
+		Car car = new Car(null, null, 0, 0, 0, false);
 
-		Class c1 = bmw.getClass();
+		Class c1 = car.getClass();
 		
 		System.out.println(c1);	//get hold of class object created by JVM
 		
@@ -29,7 +29,7 @@ public class Main {
 		}
 		
 		//get class loader 
-		System.out.println(BMW.class.getClassLoader());
+//		System.out.println(BMW.class.getClassLoader());
 		
 		System.out.println(String.class.getClassLoader());
 		
