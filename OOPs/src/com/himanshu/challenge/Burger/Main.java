@@ -20,11 +20,13 @@ public class Main {
       
       int element = sc.nextInt();
       sc.nextLine();
-      if(element>0&&element<5) {
+      if(element>0&&element<5&&ham.finalItems!=4) {
         ham.addAdditionalItems(element); 
       }else {
+        System.out.println("Oops! No more items can be added now.");
         break;
-      }     
+      } 
+      
     }
     
     sc.close();
