@@ -11,7 +11,10 @@ public class Main {
 
     System.out.println("Every item is $1 extra");
 
+    //display list of all additional items available to add
     ham.allItemsList();
+    
+    //item addition to burger process start here
     Scanner sc = new Scanner(System.in);
     
     boolean hasNextInt = sc.hasNextInt();
@@ -21,15 +24,16 @@ public class Main {
       int element = sc.nextInt();
       sc.nextLine();
       if(element>0&&element<5&&ham.finalItems!=4) {
-        ham.addAdditionalItems(element); 
+        //calls function in hamburger class to add element to hamburger
+        ham.addAdditionalItems(element);    
       }else {
         System.out.println("Oops! No more items can be added now.");
         break;
       } 
       
     }
-    
     sc.close();
+    //item addition to burger process ends here
     
     System.out.println("Final price to pay: " +ham.getBasePrice());
   }
