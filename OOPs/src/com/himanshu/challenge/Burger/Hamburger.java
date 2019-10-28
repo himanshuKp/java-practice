@@ -3,18 +3,15 @@ package com.himanshu.challenge.Burger;
 import java.util.Scanner;
 
 public class Hamburger {
-  private int burgerRollType;
+  private String burgerRollType;
   private String[] additionalItems = {"lettuce","tomato","carrot","olives"};
   private String meat;
   private int additionalPrice = 1;
   private int basePrice;
   protected int finalItems=0;
-  private int itemNo=1;
+  protected int itemNo=1;
   
-  public Hamburger(int burgerRollType, String meat) {
-    if(burgerRollType!=1) {
-      this.burgerRollType = 2;  //deluxe burger
-    }
+  public Hamburger(String burgerRollType, String meat) {
     this.burgerRollType = burgerRollType;
     this.meat = meat;
     this.basePrice = 20;
@@ -46,18 +43,10 @@ public class Hamburger {
     itemNo=1;
   }
   
-  private int finalPriceWithAdditionalItems(String itemName) {
+  protected int finalPriceWithAdditionalItems(String itemName) {
     this.basePrice += additionalPrice;
     System.out.println("Added " +itemName+ " to the existing hamburger.");
     return this.basePrice;
-  }
-
-  private int getBurgerRollType() {
-    return burgerRollType;
-  }
-
-  private String[] getAdditionalItems() {
-    return additionalItems;
   }
 
   protected int getBasePrice() {
