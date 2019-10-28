@@ -24,7 +24,6 @@ public class Main {
   }
 
   private static void reverse(int[] array) {
-    
     System.out.println("Non-reversed entered array: " +Arrays.toString(array));
     int temp;
     int[] reversedArray = array;
