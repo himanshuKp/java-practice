@@ -21,22 +21,34 @@ public class Main {
 	}
 
 	private static void findMin(int[] findMin) {
+		//one solution with sorting by decreasing order
+//		int temp;
+//		boolean flag = true;
+//		while(flag) {
+//			flag = false;
+//			for(int i=0;i<findMin.length-1;i++) {
+//				if(findMin[i]<findMin[i+1]) {
+//					temp = findMin[i];
+//					findMin[i] = findMin[i+1];
+//					findMin[i+1] = temp;
+//					flag = true;
+//				}
+//			}			
+//		}
+//		System.out.println("Sorted array: "+Arrays.toString(findMin));
+//		System.out.println("Minimum element in array: " +findMin[findMin.length-1]);
 		
-		int temp;
-		boolean flag = true;
-		while(flag) {
-			flag = false;
-			for(int i=0;i<findMin.length-1;i++) {
-				if(findMin[i]<findMin[i+1]) {
-					temp = findMin[i];
-					findMin[i] = findMin[i+1];
-					findMin[i+1] = temp;
-					flag = true;
-				}
-			}			
-		}
-		System.out.println("Sorted array: "+Arrays.toString(findMin));
-		System.out.println("Minimum element in array: " +findMin[findMin.length-1]);
+		//second solution
+	    int minimumElement = Integer.MAX_VALUE;
+	    
+	    for(int i=0;i<findMin.length;i++) {
+	      if(findMin[i]<minimumElement) {
+	        minimumElement = findMin[i];
+	      }
+	    }
+	    
+	    System.out.println("Entered Array: " +Arrays.toString(findMin));
+	    System.out.println("Minimum element in the array is: " +minimumElement);
 	}
 
 	private static int[] readIntegers(int count) {
