@@ -54,9 +54,6 @@ public class Main {
 		deluxeBurger.allItemsList();
 		
 		//item addition to burger process start here
-	//	Scanner sc2 = new Scanner(System.in);
-			    
-	//	boolean deluxeNextInt = sc2.hasNextInt();
 		boolean deluxeNextInt = scan.hasNextInt();    
 		while(deluxeNextInt) {
 			      
@@ -71,8 +68,6 @@ public class Main {
 		  } 
 			      
 		 }
-//		scan.close();
-//		scan.close();
 		 //item addition to burger process ends here
 			    
 		 System.out.println("Final price to pay: " +deluxeBurger.getBasePrice());
@@ -90,12 +85,6 @@ public class Main {
 		healthyBurger.allItemsList();
 		
 		//item addition to burger process start here
-		/*
-		 * Scanner sc1 = new Scanner(System.in);
-		 * 
-		 * boolean healthyNextInt = sc1.hasNextInt();
-		 */
-
 		boolean healthyNextInt = scan.hasNextInt();
 		while(healthyNextInt) {
 			      
@@ -110,8 +99,6 @@ public class Main {
 		  } 
 			      
 		 }
-//		scan.close();
-//		sc1.close();
 		 //item addition to burger process ends here
 			    
 		 System.out.println("Final price to pay: " +healthyBurger.getBasePrice());
@@ -129,12 +116,6 @@ public class Main {
 	  ham.allItemsList();
 		    
 	  //item addition to burger process start here
-		/*
-		 * Scanner sc = new Scanner(System.in);
-		 * 
-		 * boolean hasNextInt = sc.hasNextInt();
-		 */
-
 	  boolean hamNextInt = scan.hasNextInt();
 	  while(hamNextInt) {
 		      
@@ -149,7 +130,6 @@ public class Main {
 		 } 
 		      
 		 }
-//	  	  scan.close();
 		 //item addition to burger process ends here
 		    
 		 System.out.println("Final price to pay: " +ham.getBasePrice());
