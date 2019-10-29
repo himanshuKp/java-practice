@@ -20,7 +20,7 @@ public class Main {
         printInstructions();
         break;
       case 1: 
-        groceryList.printGroceryList();
+        groceryList();
         break;
       case 2:
         newItem();
@@ -64,7 +64,7 @@ public class Main {
       System.out.println("Deleting the item from the list now...");
       if(groceryList.removeGroceryItem(groceryList.getPosition(itemDeleted))) {
         System.out.println("We have successfully removed " +itemDeleted+ " from your grocer list.");
-        System.out.println("Updated list: " +groceryList.getGroceryList());
+        groceryList.getGroceryList();
       }else {
         System.out.println("We were unable to delete the item searched.");
       }
@@ -72,18 +72,41 @@ public class Main {
   }
 
   private static void modifyItem() {
-    // TODO Auto-generated method stub
+    System.out.println("Enter the item which is to be replaced: ");
+    String itemToReplace = scan.nextLine();
+    int oldItemPosition = groceryList.getPosition(itemToReplace);
+    System.out.println("Enter the new item: ");
+    String newItem = scan.nextLine();
+    groceryList.modifyGroceryItem(oldItemPosition, newItem);
+    System.out.println("\n"+"Updated list: "+"\n");
     
   }
 
   private static void newItem() {
-    // TODO Auto-generated method stub
-    
+    System.out.println("Enter the new item to be added in the grocery list: ");
+    String newItem = scan.nextLine();
+    scan.nextLine();
+    boolean isAdded = groceryList.addGroceryItem(newItem);
+    if(isAdded) {
+      System.out.println(newItem+" is successfully added to the grocery list.");
+    }else {
+      System.out.println("No item is added to the grocery list unfortutnately.");
+    }
   }
 
   private static void printInstructions() {
     // TODO Auto-generated method stub
-    
+    System.out.println("Choose from the options below");
+    System.out.println("0. Print Instructions");
+    System.out.println("1. Get grocery list");
+    System.out.println("2. Add new item in the list");
+    System.out.println("3. Replace existing item in the list");
+    System.out.println("4. Remove item from the list");
+    System.out.println("5. Search for an item in the list");
   }
 
+  private static void groceryList() {
+    groceryList.getGroceryList();
+  }
+  
 }
