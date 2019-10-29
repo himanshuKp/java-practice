@@ -6,14 +6,14 @@ public class GroceryList {
   private ArrayList<String> groceryList = new ArrayList<String>();
   
   protected boolean addGroceryItem(String item) {
-    return groceryList.add(item);  //add item in the arraylist
+   return groceryList.add(item);  //add item in the arraylist
   }
   
 
   protected void getGroceryList() {
    System.out.println("You have " +groceryList.size()+ " item in your grocery list");
    for(int count=0;count<groceryList.size();count++) {
-     System.out.println(count+" : " +groceryList.get(count));
+     System.out.println((count+1)+" : " +groceryList.get(count));
    }
   }
   
@@ -48,6 +48,15 @@ public class GroceryList {
 
   protected int getPosition(String item) {
     return groceryList.indexOf(item);
+  }
+
+
+  protected boolean contains(String itemToReplace) {
+    return groceryList.contains(itemToReplace);
+  }
+  
+  protected int itemsInTheList() {
+    return groceryList.size();
   }
 
 }
