@@ -9,12 +9,13 @@ public class GroceryList {
     groceryList.add(item);  //add item in the arraylist
   }
   
-  public void printGroceryList() {
-    System.out.println("You have " +groceryList.size()+ " item in your grocery list");
-    
+  public String[] getGroceryList() {
+//    System.out.println("You have " +groceryList.size()+ " item in your grocery list");
+    String[] groceryListItems = {};
     for(int i=0;i<groceryList.size();i++) {
-      System.out.println((i+1)+". " +groceryList.get(i));   //get item in the arraylist
+      groceryListItems[i] = groceryList.get(i);   //get item in the arraylist
     }
+    return groceryListItems;
   }
   
   public void modifyGroceryItem(int position, String newItem) {
@@ -22,14 +23,18 @@ public class GroceryList {
     System.out.println("Grocery item " +(position+1)+ " has been modified" );
   }
   
-  public void removeGroceryItem(int position) {
+  protected boolean removeGroceryItem(int position) {
     String theItem = groceryList.get(position);
-    groceryList.remove(position);   //remove item from arraylist
+      //remove item from arraylist
+    if(groceryList.remove(position)!=null) {
+      return true;
+    }else {
+      return false;
+    }
   }
   
   public String findItem(String item) {
     boolean exists = groceryList.contains(item);    //return boolean, if element exist in the arraylist
-    
     if(exists) {
       int position = groceryList.indexOf(item));    //find position in arraylist
       if(position>=0) {
@@ -37,5 +42,14 @@ public class GroceryList {
       }
     }
     return null;
+  }
+  
+  protected int getPosition(String item) {
+    return groceryList.indexOf(item);
+  }
+
+  protected boolean remove(int position) {
+    // TODO Auto-generated method stub
+    return false;
   }
 }
