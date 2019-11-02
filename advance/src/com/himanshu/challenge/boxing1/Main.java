@@ -24,7 +24,21 @@ public class Main {
     // Add data validation.
     // e.g. check if exists, or does not exist, etc.
     // Think about where you are adding the code to perform certain actions
-
+    
+    Bank bank = new Bank("RBI");
+    
+    bank.addBranch("Delhi");
+    
+    bank.addCustomer("Delhi", "HK", 50.11);
+    bank.addCustomer("Delhi", "RAJ", 2220.1);
+    bank.addTransaction("Delhi", "HK", 321.1);
+    
+    bank.addBranch("Mumbai");
+    
+    bank.addTransaction("Delhi", "HK", 321.0);
+    
+    bank.listCustomers("Delhi", true);
+    
   }
 
 }

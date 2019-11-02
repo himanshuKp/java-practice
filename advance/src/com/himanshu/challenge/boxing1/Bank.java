@@ -62,16 +62,16 @@ public class Bank {
   private String name;
   ArrayList<Branch> branches = new ArrayList<Branch>();
   
-  public Bank(String name, ArrayList<Branch> branches) {
+  public Bank(String name) {
     this.name = name;
-    this.branches = branches;
+    this.branches = new ArrayList<Branch>();
   }
 
   public String getName() {
     return name;
   }
   
-  public boolean newBranch(String name) {
+  public boolean addBranch(String name) {
     Branch existingBranch = findBranch(name);
     if(existingBranch==null) {
       this.branches.add(new Branch(name));
@@ -110,17 +110,18 @@ public class Bank {
     Branch branch = findBranch(branchName);                 //Object -- branch if there is something else null
     if(branch != null) {
       System.out.println("Customer details for branch: " +branch.getName());
-      
+      System.out.println("---------------------------------------------------------------");
       ArrayList<Customer> branchCustomers = branch.getCustomers();  //store the list of all customers in an arraylist
       for(int i=0;i<branchCustomers.size();i++) {
         Customer branchCustomer = branchCustomers.get(i);   //get the position number of customer one by one in Customer object
-        System.out.println("Customer Name: " +branchCustomer.getCustomerName() + "{" +i+ "]");  //get the name of employee 
+        System.out.println("{" +(i+1)+ "]"+ " Customer Name: " +branchCustomer.getCustomerName());  //get the name of employee 
         if(showTransactions) {                                                              // true if showtransanctions are there true
           System.out.println("Transanctions: ");
           ArrayList<Double> transanctions = branchCustomer.getTransactions();   //get list of all transactions of customer in an arraylist
           for(int j=0;j<transanctions.size();j++) {
-            System.out.println("["+j+"]"+" Amount: " +transanctions.get(j));            //get the transanctions of the customer
+            System.out.println("["+(j+1)+"]"+" Amount: " +transanctions.get(j));            //get the transanctions of the customer
           }
+          System.out.println("-------------------------------------------------------------");
         }
       }
       return true;
