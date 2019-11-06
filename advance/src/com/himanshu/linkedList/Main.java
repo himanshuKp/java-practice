@@ -3,6 +3,7 @@ package com.himanshu.linkedList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.Scanner;
 
 public class Main {
 
@@ -24,7 +25,7 @@ public class Main {
       addInOrder(placesToVisit, "Darwin");
       
       printList(placesToVisit);
-      
+      visit(placesToVisit);
       
   }
 
@@ -61,6 +62,84 @@ public class Main {
     //use listiterator instead of linkedlist
     listIterator.add(newPlaceName);
     return true;
+  }
+  
+  private static void visit(LinkedList<String> placesToVisit) {
+    ListIterator<String> citiesListIterator = placesToVisit.listIterator();
+    Scanner scanner = new Scanner(System.in);
+    boolean flag = true;
+    boolean goingForward = true;
+    if(placesToVisit.isEmpty()) {
+      System.out.println("No places to visit");
+    }else {
+      System.out.println("Now visiting: " +citiesListIterator.next());
+      printMenu();
+    }
+    
+    while(flag) {
+      int actions = scanner.nextInt();
+      scanner.nextLine();
+      switch(actions) {
+      case 0:
+        System.out.println("Holiday (vacation) over");
+        flag = false;
+        break;
+        
+      case 1:
+        if(!goingForward) {
+          if(citiesListIterator.hasNext()) {
+            citiesListIterator.next();
+          }
+          goingForward = true;
+        }
+        
+        if(citiesListIterator.hasNext()) {
+          System.out.println("Now visiting: " +citiesListIterator.next());
+          System.out.println(goingForward);
+          printMenu();
+        } else {
+          System.out.println("Reached the end of the list");      
+          System.out.println(goingForward);
+          goingForward = false;
+          printMenu();
+        }
+        break;
+        
+      case 2:
+        if(goingForward) {
+          if(citiesListIterator.hasPrevious()) {
+            citiesListIterator.previous();
+          }
+          goingForward = false;
+        }
+        
+        if(citiesListIterator.hasPrevious()) {
+          System.out.println("Now visiting: " +citiesListIterator.previous());
+          System.out.println(goingForward);
+          printMenu();
+        }else {
+          System.out.println("Reached the start of the list");
+          System.out.println(goingForward);
+          goingForward = true;
+          printMenu();
+        }
+        break;
+        
+      case 3:
+       printMenu();
+       break;
+      }
+    }
+    scanner.close();
+    
+  }
+
+  private static void printMenu() {
+    System.out.println("Available actions:\nPress: ");
+    System.out.println("0 - to quit\n"
+        + "1 - go to next city\n"
+        + "2 - go to previous city\n"
+        + "3 - print menu options");
   }
 
 }
