@@ -12,7 +12,7 @@ public class Albums {
   public Albums(String name, String artists) {
     this.artists = artists;
     this.name = name;
-    this.songs = ArrayList<Songs>();
+    this.songs = new ArrayList<Songs>();
   }
   
   public boolean addSong(String songName, Double songDuration) {
@@ -47,11 +47,11 @@ public class Albums {
   //add song to playlist  using a song title
   public boolean addToPlaylist(String title, LinkedList<Songs> playlist) {
     Songs checkSong = findSong(title);
-    if(checkSong == null) {
+    if(checkSong != null) {
       playlist.add(checkSong);
       return true;
     }
-    System.out.println("The song " +title+ " is not in the list.");
+    System.out.println("The song " +title+ " is not in this album.");
     return false;
   }
   
