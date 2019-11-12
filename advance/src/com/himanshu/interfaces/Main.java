@@ -9,7 +9,7 @@ public class Main {
     himPhone.answer();
     
     himPhone = new MobilePhone(254675);
-//    himPhone.powerOn();
+    himPhone.powerOn();
     himPhone.callPhone(254675);
     himPhone.answer();
   }

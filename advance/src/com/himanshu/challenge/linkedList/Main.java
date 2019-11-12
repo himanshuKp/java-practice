@@ -1,13 +1,13 @@
 package com.himanshu.challenge.linkedList;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
 
 public class Main {
 
-  private static ArrayList<Albums> albums = new ArrayList<Albums>();
+  private static List<Albums> albums = new ArrayList<Albums>();
 
   // Create a program that implements a playlist for songs
   // Create a Song class having Title and Duration for a song.
@@ -46,7 +46,7 @@ public class Main {
         album.addSong("High ball shooter", 4.6);
         albums.add(album);
         
-        LinkedList<Songs> playList = new LinkedList<Songs>();
+        List<Songs> playList = new ArrayList<Songs>();
         albums.get(0).addToPlaylist("High ball shooter", playList);
         albums.get(0).addToPlaylist("You can't do it right", playList);
         albums.get(0).addToPlaylist("Love don't mean a thing", playList);
@@ -60,7 +60,7 @@ public class Main {
         
 }
 
-  private static void play(LinkedList<Songs> playList) {
+  private static void play(List<Songs> playList) {
     Scanner scanner = new Scanner(System.in);
     boolean flag = false;
     boolean forward = true;
@@ -179,7 +179,7 @@ public class Main {
         break;
       }
     }
-    
+    scanner.close();
   }
 
   private static void printMenu() {
@@ -193,7 +193,7 @@ public class Main {
         + "6 - Print available actions");
   }
 
-  private static void printList(LinkedList<Songs> playList) {
+  private static void printList(List<Songs> playList) {
     ListIterator<Songs> listAllSongs = playList.listIterator();
     System.out.println("============================");
     int count=1;
