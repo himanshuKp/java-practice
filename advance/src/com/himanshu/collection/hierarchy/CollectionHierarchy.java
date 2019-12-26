@@ -99,10 +99,10 @@ public class CollectionHierarchy {
 		ArrayList<String> arrayList = new ArrayList<String>();
 		arrayList.add("Sachin");
 		arrayList.add("Dravid");
-		arrayList.add(0,"Ganguly");
+		arrayList.add(1,"Ganguly");
 		arrayList.add("Sachin");
 		
-		Collections.sort(arrayList);
+//		Collections.sort(arrayList);
 		
 		Iterator<String> arrayListIterator = arrayList.iterator();
 			
