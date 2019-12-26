@@ -1,7 +1,7 @@
 package com.himanshu.enums;
 
 enum Fish {
-	STAR,GRUPY,GOLD;
+	STAR,GRUPY,GOLD,SHARK;
 	Fish(){
 		System.out.println("Constructor");
 	}
