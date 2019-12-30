@@ -1,0 +1,50 @@
+YIELD METHOD
+
+Yield method causes to pass current executing thread to give the chance for waiting thread of same priority. if there is no waiting thread or all waiting threadings have low priority, then the same thread can continue its execution. 
+
+If multiple thread are waiting with the same priority then which waiting thread will get the chance we can't expect. It depends on thread schedular. 
+
+The thread which is yielded when it will get the chance once again, it depends on thread schedular, and we can't expect exactly. 
+
+public static native void yield();
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package multithreading;
+
+class MyThread extends Thread{
+    public void run()
+    {
+        for(int i=0;i<10;i++)
+        {
+            System.out.println("Child thread");
+            Thread.yield();                         // line 1
+        }
+    }
+}
+
+public class YieldMethod {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        MyThread thread = new MyThread();
+        
+        thread.start();
+        
+        for(int i=0;i<10;i++)
+        {
+            System.out.println("Main thread");
+        }
+    }
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+In the above program if we are commenting line 1, then both threads will be executing simultaneously and we can't expect, which thread will complete first. 
+
+If we are not commenting line 1, then child thread always calls yield() method because of that main thread will get the chance more number of times and the chance of completing main thread first is high. 
+
+Some platforms won't provide proper support for yield method. 
