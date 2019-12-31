@@ -1,8 +1,5 @@
-
-
 package com.datastructure.array;
 
-import java.util.Scanner;
 
 /**
  * Task:
@@ -45,57 +42,31 @@ he reaches 4th time, 4th last element does not exists so he deletes 1st element 
 procedure the last element in A is {3}, so outputp will be 3.
  *
  */
+
 public class RotateAndDelete {
 
 	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5,6,7,8,9};
+		rotateAndDelete(arr);
+		printArr(arr);
+	}
+
+	private static void printArr(int[] arr) {
 		// TODO Auto-generated method stub
-		
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter the number of arrays you want to create: ");
-		int numberOfArrays = scanner.nextInt();
-		while(numberOfArrays-- > 0) {
-			System.out.print("Number of elements in the array: ");
-			int numbeOfElementsInArray = scanner.nextInt();
-			int[] arr = new int[numbeOfElementsInArray];		
-			System.out.println("Input elements in array: ");
-			for(int position = 0;position<arr.length;position++) {
-				arr[position] = scanner.nextInt();
-			}
-			System.out.println("Rotate the array by positon: ");
-			int rotateArrayByPosition = scanner.nextInt();
-			rotateElementsInArray(arr,rotateArrayByPosition);
-			print(arr);
-		}
-		
-	}
-
-	/**
-	 * @param arr, passing the array 
-	 * @param rotateArrayByPosition, position by which the array is to be rotated
-	 */
-	private static void rotateElementsInArray(int[] arr, int rotateArrayByPosition) {
-		
-		int totalElements = arr.length;
-		if(rotateArrayByPosition == 0 || rotateArrayByPosition == totalElements) {
-			return;
-		}
-		int remainingElements = totalElements - rotateArrayByPosition;
-		
-		swap();
-	}
-
-	private static void swap() {
-		
-	}
-
-	private static void print(int[] arr) {
-		System.out.println("Output elements of arrays: ");
 		StringBuilder outputElementsOfArray = new StringBuilder();
 		for(int position = 0;position<arr.length;position++)
 		{
 			outputElementsOfArray.append(arr[position]+" ");
 		}
 		System.out.println(outputElementsOfArray);
+	}
+
+	private static void rotateAndDelete(int[] arr) {
+		int lengthOfArray = arr.length;
+		for(int i=0;i<lengthOfArray;i++)
+		{
+			
+		}
 	}
 
 }
