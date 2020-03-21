@@ -50,22 +50,22 @@ public class RotateByKPositon {
 			swap(arr,gcd,rotateArrayByPosition,totalElements);
 	}
 
-	private static int findGcd(int totalElements, int rotateArrayByPosition) {
-		
-		if(totalElements == 0)
-			return rotateArrayByPosition;
-		
-		if(rotateArrayByPosition == 0)
-			return totalElements;
-		
-		if(totalElements == rotateArrayByPosition)
-			return totalElements;
-
-		if(totalElements > rotateArrayByPosition)
-			return findGcd(totalElements - rotateArrayByPosition, rotateArrayByPosition);
-		return (totalElements, totalElements-rotateArrayByPosition);
-	
-	}
+//	private static int findGcd(int totalElements, int rotateArrayByPosition) {
+//		
+//		if(totalElements == 0)
+//			return rotateArrayByPosition;
+//		
+//		if(rotateArrayByPosition == 0)
+//			return totalElements;
+//		
+//		if(totalElements == rotateArrayByPosition)
+//			return totalElements;
+//
+//		if(totalElements > rotateArrayByPosition)
+//			return findGcd(totalElements - rotateArrayByPosition, rotateArrayByPosition);
+////		return (totalElements, totalElements-rotateArrayByPosition);
+//	
+//	}
 
 	private static void swap(int[] arr, int gcd, int rotateArrayByPosition, int totalElements) {
 		int d,i,j,temp;
