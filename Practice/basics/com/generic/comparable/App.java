@@ -22,13 +22,11 @@ class Data<T extends Comparable<T>> implements Comparable<T>{
 		return getMyVariable().compareTo(o);
 	}
 	
-	
 }
 
 public class App {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Data<Integer> data = new Data<Integer>(1);
 		System.out.println(data.compareTo(1));
 	}
