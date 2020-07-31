@@ -33,9 +33,17 @@ public class MemberAreaController extends HttpServlet {
 		case "destroy":			
 //			destroy cookie data and invalidate session
 			request.getSession().invalidate();
-			response.sendRedirect("login.jsp");
+			response.sendRedirect(request.getContextPath()+"/SiteController?action=login");
 			break;
-
+		
+		case "memberPage":
+			request.getRequestDispatcher("welcome.jsp").forward(request, response);
+			break;
+			
+		case "memberOnly":
+			request.getRequestDispatcher("memberOnly.jsp").forward(request, response);
+			break;
+			
 		default:
 			break;
 		}

@@ -11,12 +11,8 @@
 	<!-- handle session and cookie -->
 	<%
 		String username = null, sessionID = null;
-		if(request.getSession().getAttribute("username") == null){
-			response.sendRedirect("login.jsp");
-		}else{
 			username = request.getSession().getAttribute("username").toString();
 			sessionID = request.getSession().getId();
-		}
 	
 	%>
 

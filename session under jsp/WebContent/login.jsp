@@ -15,6 +15,7 @@
 	Password:
 	<input type="password" name="password" placeholder="******" />
 	<!-- submit -->
+	<input type="hidden" name="action" value="loginSubmit"/>
 	<input type="submit" value="submit" />
 	
 </form>

@@ -28,8 +28,15 @@ public class SiteController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String action = request.getParameter("action");
+		switch (action) {
+		case "login":
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+			break;
+		
+		default:
+			break;
+		}
 	}
 
 	/**
@@ -37,6 +44,22 @@ public class SiteController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String action = request.getParameter("action");
+		
+		switch (action) {
+		case "loginSubmit":
+			authenticate(request, response);
+			break;
+
+		default:
+			break;
+		}
+		
+		
+		
+	}
+
+	private void authenticate(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
@@ -47,13 +70,11 @@ public class SiteController extends HttpServlet {
 //			create new session
 			HttpSession newSession = request.getSession(true);
 			newSession.setMaxInactiveInterval(300);
-			newSession.setAttribute("username", username);			
-			
-			response.sendRedirect("welcome.jsp");
+			newSession.setAttribute("username", username);	
+			response.sendRedirect(request.getContextPath()+"/MemberAreaController?action=memberPage");
 		}else{
-			response.sendRedirect("login.jsp");
+			response.sendRedirect(request.getContextPath()+"/SiteController?action=login");
 		}
-		
 	}
 
 }
