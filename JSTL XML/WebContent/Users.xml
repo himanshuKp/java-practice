@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user>
+		<name>himanshu</name>
+		<gender>male</gender>
+		<age>28</age>
+	</user>
+	<user>
+		<name>deepti</name>
+		<gender>female</gender>
+		<age>35</age>
+	</user>
+	<user>
+		<name>pratibha</name>
+		<gender>female</gender>
+		<age>27</age>
+	</user>
+</users>
