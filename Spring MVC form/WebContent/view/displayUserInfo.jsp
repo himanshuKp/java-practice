@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Display user info</title>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/files/css/style.css">
 </head>
 <body>
 
@@ -16,6 +17,16 @@ Gender: ${user.gender}
 Country: ${user.country}
 <br>
 Introduction: ${user.introduction}
+<br>
+Countries Visited: 
+<br>
+<ul>
+	<c:forEach items="${user.visitedCountry}" var="iVisited">
+		<li>
+			${iVisited}
+		</li>
+	</c:forEach>
+</ul>
 
 </body>
 </html>

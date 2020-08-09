@@ -8,6 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User form</title>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/files/css/style.css">
 </head>
 <body>
 
@@ -20,6 +21,13 @@
 	<p/>
 	Introduction: <form:textarea path="introduction" />
 	<p/>
+	Country Visited:
+	<p/> 
+	China: <form:checkbox path="visitedCountry" value="China"/>
+	India: <form:checkbox path="visitedCountry" value="India"/>
+	USA: <form:checkbox path="visitedCountry" value="USA"/>
+	Britain: <form:checkbox path="visitedCountry" value="Britain"/>
+	<p />
 	<input type="submit" value="submit">
 </form:form>
 

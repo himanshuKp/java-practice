@@ -5,6 +5,7 @@ public class User {
 	private String gender;
 	private String country;
 	private String introduction;
+	private String visitedCountry[];
 	
 	public String getName() {
 		return name;
@@ -29,6 +30,12 @@ public class User {
 	}
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
+	}
+	public String[] getVisitedCountry() {
+		return visitedCountry;
+	}
+	public void setVisitedCountry(String[] visitedCountry) {
+		this.visitedCountry = visitedCountry;
 	}
 	
 	
