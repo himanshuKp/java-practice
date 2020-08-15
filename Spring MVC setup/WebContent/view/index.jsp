@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Please enter your name 
-<form action="displayname">
-<input type="text" name="firstName">
-<input type="submit" value="submit">	
-</form>
+Please enter your name	
 </body>
 </html>

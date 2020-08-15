@@ -1,4 +1,4 @@
-package org.himanshu;
+package org.himanshu.controller;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,20 +18,5 @@ public class MainController {
 	public String welcome() {
 		return "index";
 	}
-	
-	@GetMapping("displayname")
-	public ModelAndView displayName(@RequestParam("firstName") String name) {
-		ModelAndView modelAndView = new ModelAndView("displayName");
-		List<String> names = new ArrayList<String>();
-		names.add("Himanshu");
-		names.add("Pratibha");
-		names.add("Sashi");
-		names.add("Check");
-		Date date = new Date();
-		modelAndView.addObject("date", date);
-		modelAndView.addObject("firstname", name);
-		modelAndView.addObject("team", names);
-		return modelAndView;
-	}
-	
+		
 }

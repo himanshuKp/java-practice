@@ -15,9 +15,11 @@ Date: ${date}
 <br>
 Team list:
 <br>
-<c:forEach var="teamMember" items="${team}">
-${teamMember} 
-<br>
-</c:forEach>
+<p><font color="red">${errorMessage}</font></p>
+<form action="" method="POST">
+	Name: <input name="name" type="text" />
+	Password: <input name="password" type="password" />
+	<input type="submit">
+</form>
 </body>
 </html>
