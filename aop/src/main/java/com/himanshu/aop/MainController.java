@@ -2,7 +2,9 @@ package com.himanshu.aop;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.himanshu.aop.dao.AccountDAO;
+import com.himanshu.aop.dao.before.AccountDAO;
+import com.himanshu.aop.dao.before.BeforeDAO;
+import com.himanshu.aop.dao.before.MembershipDAO;
 
 public class MainController {
 
@@ -15,10 +17,18 @@ public class MainController {
 //		get the bean from spring container
 		AccountDAO theAccount = appContext.getBean("accountDAO", AccountDAO.class);
 		
+//		get the bean from spring container
+		MembershipDAO theMembershipDAO = appContext.getBean("membershipDAO", MembershipDAO.class);
+		
+//		get the bean from spring container
+		BeforeDAO theBeforeDAO = appContext.getBean("beforeDAO", BeforeDAO.class);
+		
 //		call the business method
 		theAccount.accountDao();
 		
-		theAccount.accountDao();
+		theMembershipDAO.accountMemmbershipDao();;
+				
+		theBeforeDAO.accountBeforeDAO();;
 		
 //		close application context
 		appContext.close();
