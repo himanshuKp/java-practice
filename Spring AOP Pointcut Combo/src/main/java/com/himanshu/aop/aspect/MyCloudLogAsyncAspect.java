@@ -2,18 +2,15 @@ package com.himanshu.aop.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Aspect
-@Order(1)
+@Order(2)
 @Component
-public class AspectDAO {
-
+public class MyCloudLogAsyncAspect {
 	@Before("com.himanshu.aop.aspect.MyAOPExpressions.forDAOpackageNoGetterSetter()")
-	public void runBeforeDAOMethod() {
-		System.out.println("-----> executing @Before advice before method");
+	public void logToCloudAsync() {
+		System.out.println("===========> performing log analytics here");
 	}
-
 }

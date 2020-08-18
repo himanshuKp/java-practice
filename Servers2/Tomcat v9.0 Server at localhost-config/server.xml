@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Spring MVC Project Java JDBC Config" path="/Spring_mvc_project_java_jdbc_setup" reloadable="true" source="org.eclipse.jst.jee.server:Spring MVC Project Java JDBC Config"/><Context docBase="Spring AOP" path="/Spring AOP" reloadable="true" source="org.eclipse.jst.jee.server:Spring AOP"/></Host>
+      <Context docBase="Spring MVC Project Java JDBC Config" path="/Spring_mvc_project_java_jdbc_setup" reloadable="true" source="org.eclipse.jst.jee.server:Spring MVC Project Java JDBC Config"/><Context docBase="Spring AOP" path="/Spring AOP" reloadable="true" source="org.eclipse.jst.jee.server:Spring AOP"/><Context docBase="Spring AOP Pointcut Combo" path="/Spring-AOP-Pointcut-Combo" reloadable="true" source="org.eclipse.jst.jee.server:Spring AOP Pointcut Combo"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -1,22 +1,21 @@
 package com.himanshu.aop;
 
 public class Account {
-	int id;
-
-	public Account(int id) {
-		this.id = id;
-	}
-
+	String name;
+	
 	public Account() {
 	}
 
-	public int getId() {
-		return id;
+	public Account(String name) {
+		this.name = name;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public String getName() {
+		return name;
 	}
-	
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 }
