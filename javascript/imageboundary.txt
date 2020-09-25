@@ -1,0 +1,38 @@
+// write your code here
+var img = new SimpleImage("smallpanda.png");
+var out = new SimpleImage(img.getWidth(),img.getHeight());
+
+var thickness = 20;
+var endWidth = img.getWidth()-thickness;
+var endHeight = img.getHeight()-thickness;
+
+setBlack(img,thickness);
+
+function setBlack(image,thickness){
+    for(var pixel of image.values()){
+    
+    if(pixel.getX()<thickness){
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+    if(pixel.getY()<thickness){
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+    if(pixel.getX()>endWidth){
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+    if(pixel.getY()>endHeight){
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+    out.setPixel(pixel.getX(),pixel.getY(),pixel);
+    }
+}
+
+print(out);
