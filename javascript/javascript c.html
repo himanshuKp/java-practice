@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm javascript</title>
+</head>
+
+<style>
+    h1 {
+        font-family: arial;
+        color: dimgray;
+    }
+
+    div {
+        width: 140pt;
+        padding: 5pt;
+        margins: 10pt;
+        border: 1px solid lightgray;
+        font-size: 16pt;
+    }
+
+    #div1 {
+        background-color: lightsteelblue;
+    }
+
+    #div2 {
+        background-color: #FA8072;
+    }
+</style>
+
+<body>
+    <h1>Buttons with two divs</h1>
+    <div id="div1">
+        Here is div 1
+    </div>
+
+    <div id="div2">
+        Here is div 2
+    </div>
+
+    <input type="button" value="click me" onclick="sayHi()"></input>
+
+    <script>
+        function sayHi() {
+            var result = confirm("Hit one.");
+            if (result) {
+                alert("You hit ok");
+            } else {
+                alert("Are you sure you want to cancel?");
+            }
+        }
+    </script>
+</body>
+
+</html>

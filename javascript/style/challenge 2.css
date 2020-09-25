@@ -1,0 +1,23 @@
+div {
+    width: 140pt;
+    padding: 5pt;
+    margins: 10pt;
+    border: 1px solid lightgray;
+    font-size: 16pt;
+}
+
+.orangeback {
+background-color: orange;
+}
+
+.fuchsiaback {
+background-color: fuchsia;
+}
+
+.hotpink {
+background-color: hotpink;
+}
+
+.lightblue {
+background-color: lightblue;
+}
