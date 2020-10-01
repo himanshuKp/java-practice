@@ -1,0 +1,22 @@
+canvas {
+  width: 200pt;
+  height: 100pt;
+  margin: 10px;
+  border: 1px solid lightgrey;
+}
+
+input {
+  font-size: 20pt;
+}
+
+.orangeback {
+  background-color: orange;
+}
+
+.fuchsiaback {
+  background-color: fuchsia;
+}
+
+.blueback {
+  background-color: blue;
+}
