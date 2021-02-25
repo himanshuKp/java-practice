@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="advance/src"/>
+	<classpathentry kind="src" path="annotations/src"/>
+	<classpathentry kind="src" path="Autowire/src/main/java"/>
+	<classpathentry kind="src" path="basic application/src"/>
+	<classpathentry kind="src" path="basics/src"/>
+	<classpathentry kind="src" path="beans overview/src"/>
+	<classpathentry kind="src" path="cdac module/src"/>
+	<classpathentry excluding="coursera/" kind="src" path="concepts"/>
+	<classpathentry kind="src" path="concepts/coursera"/>
+	<classpathentry kind="src" path="form under jsp/src"/>
+	<classpathentry kind="src" path="Hello Servlets/src"/>
+	<classpathentry kind="src" path="in28Minutes-springmvc2/src/main/java"/>
+	<classpathentry kind="src" path="Include class in jsp page/src"/>
+	<classpathentry kind="src" path="Include class in jsp page2/src"/>
+	<classpathentry kind="src" path="JSP DB Integration/src"/>
+	<classpathentry kind="src" path="JSTL reading from bean using expression/src"/>
+	<classpathentry kind="src" path="JSTL reading from bean using expression2/src"/>
+	<classpathentry kind="src" path="Language Family/src"/>
+	<classpathentry kind="src" path="OOPs/src"/>
+	<classpathentry kind="src" path="Practice/basics"/>
+	<classpathentry kind="src" path="Reading url pattern/src"/>
+	<classpathentry kind="src" path="S08L13 - Working with inheritance - Part 5/src"/>
+	<classpathentry kind="src" path="session under jsp/src"/>
+	<classpathentry kind="src" path="Spring AOP After Returning/src/main/java"/>
+	<classpathentry kind="src" path="Spring AOP Pointcut Combo/src/main/java"/>
+	<classpathentry kind="src" path="Spring AOP/src/main/java"/>
+	<classpathentry kind="src" path="Spring bean/src/main/java"/>
+	<classpathentry kind="src" path="Spring constructor injection/src/main/java"/>
+	<classpathentry kind="src" path="Spring MVC form/src"/>
+	<classpathentry kind="src" path="Spring MVC Project Java JDBC Config/src"/>
+	<classpathentry kind="src" path="Spring MVC Project Setup/src"/>
+	<classpathentry kind="src" path="Spring MVC setup/src"/>
+	<classpathentry kind="src" path="Spring5/src/main/java"/>
+	<classpathentry kind="lib" path="JSP DB Integration/WebContent/WEB-INF/lib/postgresql-42.2.14.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="JSTL function/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="JSTL function2/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="JSTL i18n/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="JSTL reading from bean using expression/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="JSTL reading from bean using expression2/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="JSTL settingup/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="JSTL XML/WebContent/WEB-INF/lib/jstl-1.2.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="Autowire/target/classes"/>
+</classpath>
